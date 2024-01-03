@@ -21,23 +21,26 @@ To install and run this project, you need to have Python 3.8 or higher, and the 
     pip install -r requirements.txt
 
 3. **Set Up API Keys**
-    To run this project, you need to set the API_KEY environment variable to your OpenAI API key.
+   To run this project, you need to set the API_KEY environment variable to your OpenAI API key.
     ```bash
     export API_KEY=<your-key>
 
 ## Example Scripts
-    There are two simple scripts which create OpenAI AI Assistants for performing data validation tasks - outlier detection and numerical validation. The scripts perform the required tasks such as creating an assistant, uploading a file, creating a thread, sending a message, creating a run, checking the run status, processing the assistant response, and deleting the thread.
+The **assistants** folder has two simple scripts which create OpenAI AI Assistants for performing data validation tasks - outlier detection and numerical validation. The scripts perform the required tasks such as creating an assistant, uploading a file, creating a thread, sending a message, creating a run, checking the run status, processing the assistant response, and deleting the thread.
 
-### Features
+## Features
 
 This project has the following functionalities:
+<ul>
+   
+**AssistantManager**: A class for managing OpenAI assistants, which provides methods for creating, listing, retrieving, and deleting assistants using the OpenAI API. <br>
+**FileManager**: A class for managing OpenAI files, which provides methods for uploading, listing, retrieving files using the OpenAI API. <br>
+**ThreadManager**: A class for managing OpenAI threads, which provides methods for creating, listing, retrieving, and deleting threads using the OpenAI API. <br>
+**MessageManager**: A class for managing OpenAI messages, which provides methods for creating, listing, retrieving messages using the OpenAI API. It also provides a method for processing the assistant response and displaying it to the user. <br>
+**RunManager**: A class for managing OpenAI runs, which provides methods for creating, retrieving, and submitting tool outputs for runs using the OpenAI API. It also provides a method for checking the run status and handling the required actions from the user. <br>
+**api_exception_handler**: A module that defines custom exception classes and decorator functions for handling OpenAI API errors, such as BadRequestError, RateLimitError, AuthenticationError, APIError, etc. <br>
 
-***AssistantManager***: A class for managing OpenAI assistants, which provides methods for creating, listing, retrieving, and deleting assistants using the OpenAI API. 
-***FileManager***: A class for managing OpenAI files, which provides methods for uploading, listing, retrieving files using the OpenAI API.
-***ThreadManager***: A class for managing OpenAI threads, which provides methods for creating, listing, retrieving, and deleting threads using the    OpenAI API.
-***MessageManager***: A class for managing OpenAI messages, which provides methods for creating, listing, retrieving messages using the OpenAI API. It also provides a method for processing the assistant response and displaying it to the user.
-***RunManager***: A class for managing OpenAI runs, which provides methods for creating, retrieving, and submitting tool outputs for runs using the OpenAI API. It also provides a method for checking the run status and handling the required actions from the user.
-***api_exception_handler***: A module that defines custom exception classes and decorator functions for handling OpenAI API errors, such as BadRequestError, RateLimitError, AuthenticationError, APIError, etc.
+</ul>
 
 ## License ##
 This project is licensed under the MIT License.
