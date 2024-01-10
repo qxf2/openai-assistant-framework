@@ -94,7 +94,7 @@ def perform_numerical_validation():
         )
         print("\nDetails of message added to thread: ", message_details)
     except api_exception_handler.MessageError as message_error:
-        print("Error while creating thread:", message_error)
+        print("Error adding message to thread:", message_error)
         sys.exit(1)
 
     # Create a run
