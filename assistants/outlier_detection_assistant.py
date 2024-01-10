@@ -48,7 +48,7 @@ def perform_outlier_detection():
     """
     #Retreive the Outlier detection Assistant details
     try:
-        assistant_id = "asst_xVVqcjSmRCQm6J1TDVDLqWqy"
+        assistant_id = ""
         assistant = ASSISTANT_MANAGER.retrieve_assistant(assistant_id)
         print(f"Validation Assistant details, ID: {assistant.id}, Name: {assistant.name}")
     except api_exception_handler.AssistantError as error:
@@ -77,7 +77,7 @@ def perform_outlier_detection():
         )
         print("\nDetails of message added to thread: ", message_details)
     except api_exception_handler.MessageError as message_error:
-        print("Error while creating thread:", message_error)
+        print("Error adding message to thread:", message_error)
         sys.exit(1)
 
     #Create a run
